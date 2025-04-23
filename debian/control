@@ -5,14 +5,14 @@ Maintainer: Debian EFI team <debian-efi@lists.debian.org>
 Standards-Version: 4.3.0
 Build-Depends: debhelper (>= 10.1~),
  sbsigntool [amd64 arm64 i386],
- shim-unsigned (= 15.8-1),
+ shim-unsigned (>= 15.8-0),
 
 Package: shim-helpers-amd64-signed
 Architecture: amd64
 Conflicts: shim (<< 15+1533136590.3beb971-3~),
 Replaces: shim (<< 15+1533136590.3beb971-3~), shim-signed (<< 1.29),
 Breaks: shim-signed (<< 1.29),
-Depends: shim-unsigned (>= 15.8-1), ${misc:Depends},
+Depends: shim-unsigned (>= 15.8-0), ${misc:Depends},
 Built-Using: shim (= 15.8-1)
 Description: boot loader to chain-load signed boot loaders (signed by Debian)
  This package provides a minimalist boot loader which allows verifying
